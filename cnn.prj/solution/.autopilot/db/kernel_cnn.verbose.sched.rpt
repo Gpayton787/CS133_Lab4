@@ -1,0 +1,285 @@
+
+
+================================================================
+== Vitis HLS Report for 'kernel_cnn'
+================================================================
+* Date:           Thu May 22 18:56:38 2025
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        cnn.prj
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu200-fsgd2104-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  3.096 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +-----------+-----------+-----------+-----------+-----------+-----------+---------+
+    |    Latency (cycles)   |   Latency (absolute)  |        Interval       | Pipeline|
+    |    min    |    max    |    min    |    max    |    min    |    max    |   Type  |
+    +-----------+-----------+-----------+-----------+-----------+-----------+---------+
+    |  159017426|  159017426|  0.636 sec|  0.636 sec|  159017427|  159017427|       no|
+    +-----------+-----------+-----------+-----------+-----------+-----------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 3 [1/1] (1.00ns)   --->   "%voutput_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %voutput"   --->   Operation 3 'read' 'voutput_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 4 [1/1] (1.00ns)   --->   "%vweight_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %vweight"   --->   Operation 4 'read' 'vweight_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 5 [1/1] (1.00ns)   --->   "%vinput_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %vinput"   --->   Operation 5 'read' 'vinput_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%input = alloca i64 1" [cnn.cpp:389]   --->   Operation 6 'alloca' 'input' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%input_1 = alloca i64 1" [cnn.cpp:389]   --->   Operation 7 'alloca' 'input_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%input_2 = alloca i64 1" [cnn.cpp:389]   --->   Operation 8 'alloca' 'input_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%input_3 = alloca i64 1" [cnn.cpp:389]   --->   Operation 9 'alloca' 'input_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%input_4 = alloca i64 1" [cnn.cpp:389]   --->   Operation 10 'alloca' 'input_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%input_5 = alloca i64 1" [cnn.cpp:389]   --->   Operation 11 'alloca' 'input_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%input_6 = alloca i64 1" [cnn.cpp:389]   --->   Operation 12 'alloca' 'input_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%input_7 = alloca i64 1" [cnn.cpp:389]   --->   Operation 13 'alloca' 'input_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%input_8 = alloca i64 1" [cnn.cpp:389]   --->   Operation 14 'alloca' 'input_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%input_9 = alloca i64 1" [cnn.cpp:389]   --->   Operation 15 'alloca' 'input_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%input_10 = alloca i64 1" [cnn.cpp:389]   --->   Operation 16 'alloca' 'input_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%input_11 = alloca i64 1" [cnn.cpp:389]   --->   Operation 17 'alloca' 'input_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%input_12 = alloca i64 1" [cnn.cpp:389]   --->   Operation 18 'alloca' 'input_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%input_13 = alloca i64 1" [cnn.cpp:389]   --->   Operation 19 'alloca' 'input_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%input_14 = alloca i64 1" [cnn.cpp:389]   --->   Operation 20 'alloca' 'input_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%input_15 = alloca i64 1" [cnn.cpp:389]   --->   Operation 21 'alloca' 'input_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%input_16 = alloca i64 1" [cnn.cpp:389]   --->   Operation 22 'alloca' 'input_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%input_17 = alloca i64 1" [cnn.cpp:389]   --->   Operation 23 'alloca' 'input_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%input_18 = alloca i64 1" [cnn.cpp:389]   --->   Operation 24 'alloca' 'input_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%input_19 = alloca i64 1" [cnn.cpp:389]   --->   Operation 25 'alloca' 'input_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%input_20 = alloca i64 1" [cnn.cpp:389]   --->   Operation 26 'alloca' 'input_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%input_21 = alloca i64 1" [cnn.cpp:389]   --->   Operation 27 'alloca' 'input_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%input_22 = alloca i64 1" [cnn.cpp:389]   --->   Operation 28 'alloca' 'input_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%input_23 = alloca i64 1" [cnn.cpp:389]   --->   Operation 29 'alloca' 'input_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%input_24 = alloca i64 1" [cnn.cpp:389]   --->   Operation 30 'alloca' 'input_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%input_25 = alloca i64 1" [cnn.cpp:389]   --->   Operation 31 'alloca' 'input_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%input_26 = alloca i64 1" [cnn.cpp:389]   --->   Operation 32 'alloca' 'input_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%input_27 = alloca i64 1" [cnn.cpp:389]   --->   Operation 33 'alloca' 'input_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%input_28 = alloca i64 1" [cnn.cpp:389]   --->   Operation 34 'alloca' 'input_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%input_29 = alloca i64 1" [cnn.cpp:389]   --->   Operation 35 'alloca' 'input_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%input_30 = alloca i64 1" [cnn.cpp:389]   --->   Operation 36 'alloca' 'input_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%input_31 = alloca i64 1" [cnn.cpp:389]   --->   Operation 37 'alloca' 'input_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%input_32 = alloca i64 1" [cnn.cpp:389]   --->   Operation 38 'alloca' 'input_32' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%input_33 = alloca i64 1" [cnn.cpp:389]   --->   Operation 39 'alloca' 'input_33' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%input_34 = alloca i64 1" [cnn.cpp:389]   --->   Operation 40 'alloca' 'input_34' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%input_35 = alloca i64 1" [cnn.cpp:389]   --->   Operation 41 'alloca' 'input_35' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%input_36 = alloca i64 1" [cnn.cpp:389]   --->   Operation 42 'alloca' 'input_36' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%input_37 = alloca i64 1" [cnn.cpp:389]   --->   Operation 43 'alloca' 'input_37' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%input_38 = alloca i64 1" [cnn.cpp:389]   --->   Operation 44 'alloca' 'input_38' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%input_39 = alloca i64 1" [cnn.cpp:389]   --->   Operation 45 'alloca' 'input_39' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%input_40 = alloca i64 1" [cnn.cpp:389]   --->   Operation 46 'alloca' 'input_40' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%input_41 = alloca i64 1" [cnn.cpp:389]   --->   Operation 47 'alloca' 'input_41' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%input_42 = alloca i64 1" [cnn.cpp:389]   --->   Operation 48 'alloca' 'input_42' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%input_43 = alloca i64 1" [cnn.cpp:389]   --->   Operation 49 'alloca' 'input_43' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%input_44 = alloca i64 1" [cnn.cpp:389]   --->   Operation 50 'alloca' 'input_44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%input_45 = alloca i64 1" [cnn.cpp:389]   --->   Operation 51 'alloca' 'input_45' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%input_46 = alloca i64 1" [cnn.cpp:389]   --->   Operation 52 'alloca' 'input_46' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%input_47 = alloca i64 1" [cnn.cpp:389]   --->   Operation 53 'alloca' 'input_47' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%input_48 = alloca i64 1" [cnn.cpp:389]   --->   Operation 54 'alloca' 'input_48' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%input_49 = alloca i64 1" [cnn.cpp:389]   --->   Operation 55 'alloca' 'input_49' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%input_50 = alloca i64 1" [cnn.cpp:389]   --->   Operation 56 'alloca' 'input_50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%input_51 = alloca i64 1" [cnn.cpp:389]   --->   Operation 57 'alloca' 'input_51' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%input_52 = alloca i64 1" [cnn.cpp:389]   --->   Operation 58 'alloca' 'input_52' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%input_53 = alloca i64 1" [cnn.cpp:389]   --->   Operation 59 'alloca' 'input_53' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%input_54 = alloca i64 1" [cnn.cpp:389]   --->   Operation 60 'alloca' 'input_54' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%input_55 = alloca i64 1" [cnn.cpp:389]   --->   Operation 61 'alloca' 'input_55' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%input_56 = alloca i64 1" [cnn.cpp:389]   --->   Operation 62 'alloca' 'input_56' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%input_57 = alloca i64 1" [cnn.cpp:389]   --->   Operation 63 'alloca' 'input_57' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%input_58 = alloca i64 1" [cnn.cpp:389]   --->   Operation 64 'alloca' 'input_58' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%input_59 = alloca i64 1" [cnn.cpp:389]   --->   Operation 65 'alloca' 'input_59' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%input_60 = alloca i64 1" [cnn.cpp:389]   --->   Operation 66 'alloca' 'input_60' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%input_61 = alloca i64 1" [cnn.cpp:389]   --->   Operation 67 'alloca' 'input_61' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%input_62 = alloca i64 1" [cnn.cpp:389]   --->   Operation 68 'alloca' 'input_62' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%input_63 = alloca i64 1" [cnn.cpp:389]   --->   Operation 69 'alloca' 'input_63' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%input_64 = alloca i64 1" [cnn.cpp:389]   --->   Operation 70 'alloca' 'input_64' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%input_65 = alloca i64 1" [cnn.cpp:389]   --->   Operation 71 'alloca' 'input_65' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%input_66 = alloca i64 1" [cnn.cpp:389]   --->   Operation 72 'alloca' 'input_66' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%input_67 = alloca i64 1" [cnn.cpp:389]   --->   Operation 73 'alloca' 'input_67' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%input_68 = alloca i64 1" [cnn.cpp:389]   --->   Operation 74 'alloca' 'input_68' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%input_69 = alloca i64 1" [cnn.cpp:389]   --->   Operation 75 'alloca' 'input_69' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%input_70 = alloca i64 1" [cnn.cpp:389]   --->   Operation 76 'alloca' 'input_70' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%input_71 = alloca i64 1" [cnn.cpp:389]   --->   Operation 77 'alloca' 'input_71' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%input_72 = alloca i64 1" [cnn.cpp:389]   --->   Operation 78 'alloca' 'input_72' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%input_73 = alloca i64 1" [cnn.cpp:389]   --->   Operation 79 'alloca' 'input_73' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%input_74 = alloca i64 1" [cnn.cpp:389]   --->   Operation 80 'alloca' 'input_74' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%input_75 = alloca i64 1" [cnn.cpp:389]   --->   Operation 81 'alloca' 'input_75' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%input_76 = alloca i64 1" [cnn.cpp:389]   --->   Operation 82 'alloca' 'input_76' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%input_77 = alloca i64 1" [cnn.cpp:389]   --->   Operation 83 'alloca' 'input_77' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%input_78 = alloca i64 1" [cnn.cpp:389]   --->   Operation 84 'alloca' 'input_78' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%input_79 = alloca i64 1" [cnn.cpp:389]   --->   Operation 85 'alloca' 'input_79' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%input_80 = alloca i64 1" [cnn.cpp:389]   --->   Operation 86 'alloca' 'input_80' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%input_81 = alloca i64 1" [cnn.cpp:389]   --->   Operation 87 'alloca' 'input_81' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%input_82 = alloca i64 1" [cnn.cpp:389]   --->   Operation 88 'alloca' 'input_82' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%input_83 = alloca i64 1" [cnn.cpp:389]   --->   Operation 89 'alloca' 'input_83' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%input_84 = alloca i64 1" [cnn.cpp:389]   --->   Operation 90 'alloca' 'input_84' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%input_85 = alloca i64 1" [cnn.cpp:389]   --->   Operation 91 'alloca' 'input_85' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%input_86 = alloca i64 1" [cnn.cpp:389]   --->   Operation 92 'alloca' 'input_86' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%input_87 = alloca i64 1" [cnn.cpp:389]   --->   Operation 93 'alloca' 'input_87' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%input_88 = alloca i64 1" [cnn.cpp:389]   --->   Operation 94 'alloca' 'input_88' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%input_89 = alloca i64 1" [cnn.cpp:389]   --->   Operation 95 'alloca' 'input_89' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%input_90 = alloca i64 1" [cnn.cpp:389]   --->   Operation 96 'alloca' 'input_90' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%input_91 = alloca i64 1" [cnn.cpp:389]   --->   Operation 97 'alloca' 'input_91' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%input_92 = alloca i64 1" [cnn.cpp:389]   --->   Operation 98 'alloca' 'input_92' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%input_93 = alloca i64 1" [cnn.cpp:389]   --->   Operation 99 'alloca' 'input_93' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%input_94 = alloca i64 1" [cnn.cpp:389]   --->   Operation 100 'alloca' 'input_94' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%input_95 = alloca i64 1" [cnn.cpp:389]   --->   Operation 101 'alloca' 'input_95' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%output = alloca i64 1" [cnn.cpp:390]   --->   Operation 102 'alloca' 'output' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%output_1 = alloca i64 1" [cnn.cpp:390]   --->   Operation 103 'alloca' 'output_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%output_2 = alloca i64 1" [cnn.cpp:390]   --->   Operation 104 'alloca' 'output_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%output_3 = alloca i64 1" [cnn.cpp:390]   --->   Operation 105 'alloca' 'output_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%output_4 = alloca i64 1" [cnn.cpp:390]   --->   Operation 106 'alloca' 'output_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%output_5 = alloca i64 1" [cnn.cpp:390]   --->   Operation 107 'alloca' 'output_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%output_6 = alloca i64 1" [cnn.cpp:390]   --->   Operation 108 'alloca' 'output_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%output_7 = alloca i64 1" [cnn.cpp:390]   --->   Operation 109 'alloca' 'output_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%output_8 = alloca i64 1" [cnn.cpp:390]   --->   Operation 110 'alloca' 'output_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%output_9 = alloca i64 1" [cnn.cpp:390]   --->   Operation 111 'alloca' 'output_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%output_10 = alloca i64 1" [cnn.cpp:390]   --->   Operation 112 'alloca' 'output_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%output_11 = alloca i64 1" [cnn.cpp:390]   --->   Operation 113 'alloca' 'output_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%output_12 = alloca i64 1" [cnn.cpp:390]   --->   Operation 114 'alloca' 'output_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%output_13 = alloca i64 1" [cnn.cpp:390]   --->   Operation 115 'alloca' 'output_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%output_14 = alloca i64 1" [cnn.cpp:390]   --->   Operation 116 'alloca' 'output_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%output_15 = alloca i64 1" [cnn.cpp:390]   --->   Operation 117 'alloca' 'output_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%output_16 = alloca i64 1" [cnn.cpp:390]   --->   Operation 118 'alloca' 'output_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%output_17 = alloca i64 1" [cnn.cpp:390]   --->   Operation 119 'alloca' 'output_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%output_18 = alloca i64 1" [cnn.cpp:390]   --->   Operation 120 'alloca' 'output_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%output_19 = alloca i64 1" [cnn.cpp:390]   --->   Operation 121 'alloca' 'output_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%output_20 = alloca i64 1" [cnn.cpp:390]   --->   Operation 122 'alloca' 'output_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%output_21 = alloca i64 1" [cnn.cpp:390]   --->   Operation 123 'alloca' 'output_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%output_22 = alloca i64 1" [cnn.cpp:390]   --->   Operation 124 'alloca' 'output_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%output_23 = alloca i64 1" [cnn.cpp:390]   --->   Operation 125 'alloca' 'output_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%output_24 = alloca i64 1" [cnn.cpp:390]   --->   Operation 126 'alloca' 'output_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%output_25 = alloca i64 1" [cnn.cpp:390]   --->   Operation 127 'alloca' 'output_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%output_26 = alloca i64 1" [cnn.cpp:390]   --->   Operation 128 'alloca' 'output_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%output_27 = alloca i64 1" [cnn.cpp:390]   --->   Operation 129 'alloca' 'output_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%output_28 = alloca i64 1" [cnn.cpp:390]   --->   Operation 130 'alloca' 'output_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%output_29 = alloca i64 1" [cnn.cpp:390]   --->   Operation 131 'alloca' 'output_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%output_30 = alloca i64 1" [cnn.cpp:390]   --->   Operation 132 'alloca' 'output_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%output_31 = alloca i64 1" [cnn.cpp:390]   --->   Operation 133 'alloca' 'output_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%weight = alloca i64 1" [cnn.cpp:391]   --->   Operation 134 'alloca' 'weight' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%weight_1 = alloca i64 1" [cnn.cpp:391]   --->   Operation 135 'alloca' 'weight_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "%weight_2 = alloca i64 1" [cnn.cpp:391]   --->   Operation 136 'alloca' 'weight_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%weight_3 = alloca i64 1" [cnn.cpp:391]   --->   Operation 137 'alloca' 'weight_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%weight_4 = alloca i64 1" [cnn.cpp:391]   --->   Operation 138 'alloca' 'weight_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%weight_5 = alloca i64 1" [cnn.cpp:391]   --->   Operation 139 'alloca' 'weight_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%weight_6 = alloca i64 1" [cnn.cpp:391]   --->   Operation 140 'alloca' 'weight_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%weight_7 = alloca i64 1" [cnn.cpp:391]   --->   Operation 141 'alloca' 'weight_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%weight_8 = alloca i64 1" [cnn.cpp:391]   --->   Operation 142 'alloca' 'weight_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%weight_9 = alloca i64 1" [cnn.cpp:391]   --->   Operation 143 'alloca' 'weight_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%weight_10 = alloca i64 1" [cnn.cpp:391]   --->   Operation 144 'alloca' 'weight_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%weight_11 = alloca i64 1" [cnn.cpp:391]   --->   Operation 145 'alloca' 'weight_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "%weight_12 = alloca i64 1" [cnn.cpp:391]   --->   Operation 146 'alloca' 'weight_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%weight_13 = alloca i64 1" [cnn.cpp:391]   --->   Operation 147 'alloca' 'weight_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "%weight_14 = alloca i64 1" [cnn.cpp:391]   --->   Operation 148 'alloca' 'weight_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%weight_15 = alloca i64 1" [cnn.cpp:391]   --->   Operation 149 'alloca' 'weight_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%weight_16 = alloca i64 1" [cnn.cpp:391]   --->   Operation 150 'alloca' 'weight_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%weight_17 = alloca i64 1" [cnn.cpp:391]   --->   Operation 151 'alloca' 'weight_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "%weight_18 = alloca i64 1" [cnn.cpp:391]   --->   Operation 152 'alloca' 'weight_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%weight_19 = alloca i64 1" [cnn.cpp:391]   --->   Operation 153 'alloca' 'weight_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%weight_20 = alloca i64 1" [cnn.cpp:391]   --->   Operation 154 'alloca' 'weight_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%weight_21 = alloca i64 1" [cnn.cpp:391]   --->   Operation 155 'alloca' 'weight_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%weight_22 = alloca i64 1" [cnn.cpp:391]   --->   Operation 156 'alloca' 'weight_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%weight_23 = alloca i64 1" [cnn.cpp:391]   --->   Operation 157 'alloca' 'weight_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%weight_24 = alloca i64 1" [cnn.cpp:391]   --->   Operation 158 'alloca' 'weight_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 159 [2/2] (0.00ns)   --->   "%call_ln417 = call void @cnn, i32 %input, i32 %input_1, i32 %input_2, i32 %input_3, i32 %input_4, i32 %input_5, i32 %input_6, i32 %input_7, i32 %input_8, i32 %input_9, i32 %input_10, i32 %input_11, i32 %input_12, i32 %input_13, i32 %input_14, i32 %input_15, i32 %input_16, i32 %input_17, i32 %input_18, i32 %input_19, i32 %input_20, i32 %input_21, i32 %input_22, i32 %input_23, i32 %input_24, i32 %input_25, i32 %input_26, i32 %input_27, i32 %input_28, i32 %input_29, i32 %input_30, i32 %input_31, i32 %input_32, i32 %input_33, i32 %input_34, i32 %input_35, i32 %input_36, i32 %input_37, i32 %input_38, i32 %input_39, i32 %input_40, i32 %input_41, i32 %input_42, i32 %input_43, i32 %input_44, i32 %input_45, i32 %input_46, i32 %input_47, i32 %input_48, i32 %input_49, i32 %input_50, i32 %input_51, i32 %input_52, i32 %input_53, i32 %input_54, i32 %input_55, i32 %input_56, i32 %input_57, i32 %input_58, i32 %input_59, i32 %input_60, i32 %input_61, i32 %input_62, i32 %input_63, i32 %input_64, i32 %input_65, i32 %input_66, i32 %input_67, i32 %input_68, i32 %input_69, i32 %input_70, i32 %input_71, i32 %input_72, i32 %input_73, i32 %input_74, i32 %input_75, i32 %input_76, i32 %input_77, i32 %input_78, i32 %input_79, i32 %input_80, i32 %input_81, i32 %input_82, i32 %input_83, i32 %input_84, i32 %input_85, i32 %input_86, i32 %input_87, i32 %input_88, i32 %input_89, i32 %input_90, i32 %input_91, i32 %input_92, i32 %input_93, i32 %input_94, i32 %input_95, i32 %output, i32 %output_1, i32 %output_2, i32 %output_3, i32 %output_4, i32 %output_5, i32 %output_6, i32 %output_7, i32 %output_8, i32 %output_9, i32 %output_10, i32 %output_11, i32 %output_12, i32 %output_13, i32 %output_14, i32 %output_15, i32 %output_16, i32 %output_17, i32 %output_18, i32 %output_19, i32 %output_20, i32 %output_21, i32 %output_22, i32 %output_23, i32 %output_24, i32 %output_25, i32 %output_26, i32 %output_27, i32 %output_28, i32 %output_29, i32 %output_30, i32 %output_31, i32 %weight, i32 %weight_1, i32 %weight_2, i32 %weight_3, i32 %weight_4, i32 %weight_5, i32 %weight_6, i32 %weight_7, i32 %weight_8, i32 %weight_9, i32 %weight_10, i32 %weight_11, i32 %weight_12, i32 %weight_13, i32 %weight_14, i32 %weight_15, i32 %weight_16, i32 %weight_17, i32 %weight_18, i32 %weight_19, i32 %weight_20, i32 %weight_21, i32 %weight_22, i32 %weight_23, i32 %weight_24, i128 %kernel_input, i64 %vinput_read, i32 %kernel_weight, i64 %vweight_read, i512 %kernel_output, i64 %voutput_read" [cnn.cpp:417]   --->   Operation 159 'call' 'call_ln417' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 160 [1/1] (0.00ns)   --->   "%spectopmodule_ln374 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_13" [cnn.cpp:374]   --->   Operation 160 'spectopmodule' 'spectopmodule_ln374' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 161 [1/1] (0.00ns)   --->   "%specinterface_ln374 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_14, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0" [cnn.cpp:374]   --->   Operation 161 'specinterface' 'specinterface_ln374' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 162 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i128 %kernel_input, void @empty_15, i32 0, i32 0, void @empty_10, i32 64, i32 0, void @empty_6, void @empty_7, void @empty_10, i32 16, i32 16, i32 16, i32 16, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 162 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 163 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i128 %kernel_input"   --->   Operation 163 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 164 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %kernel_weight, void @empty_15, i32 0, i32 0, void @empty_10, i32 64, i32 0, void @empty_8, void @empty_7, void @empty_10, i32 16, i32 16, i32 16, i32 16, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 164 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 165 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %kernel_weight"   --->   Operation 165 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 166 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %kernel_output, void @empty_15, i32 0, i32 0, void @empty_10, i32 64, i32 0, void @empty_9, void @empty_7, void @empty_10, i32 16, i32 16, i32 16, i32 16, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 166 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 167 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i512 %kernel_output"   --->   Operation 167 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 168 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %vinput, void @empty, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_12, void @empty_0, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_1, i32 4294967295, i32 0"   --->   Operation 168 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 169 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %vinput, void @empty_2, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_1, i32 4294967295, i32 0"   --->   Operation 169 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 170 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %vweight, void @empty, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_12, void @empty_3, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_1, i32 4294967295, i32 0"   --->   Operation 170 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 171 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %vweight, void @empty_2, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_1, i32 4294967295, i32 0"   --->   Operation 171 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 172 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %voutput, void @empty, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_12, void @empty_4, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_1, i32 4294967295, i32 0"   --->   Operation 172 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 173 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %voutput, void @empty_2, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_10, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_1, i32 4294967295, i32 0"   --->   Operation 173 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 174 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty, i32 0, i32 0, void @empty_10, i32 0, i32 0, void @empty_12, void @empty_10, void @empty_10, i32 0, i32 0, i32 0, i32 0, void @empty_10, void @empty_10, i32 4294967295, i32 0"   --->   Operation 174 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 175 [1/2] (0.00ns)   --->   "%call_ln417 = call void @cnn, i32 %input, i32 %input_1, i32 %input_2, i32 %input_3, i32 %input_4, i32 %input_5, i32 %input_6, i32 %input_7, i32 %input_8, i32 %input_9, i32 %input_10, i32 %input_11, i32 %input_12, i32 %input_13, i32 %input_14, i32 %input_15, i32 %input_16, i32 %input_17, i32 %input_18, i32 %input_19, i32 %input_20, i32 %input_21, i32 %input_22, i32 %input_23, i32 %input_24, i32 %input_25, i32 %input_26, i32 %input_27, i32 %input_28, i32 %input_29, i32 %input_30, i32 %input_31, i32 %input_32, i32 %input_33, i32 %input_34, i32 %input_35, i32 %input_36, i32 %input_37, i32 %input_38, i32 %input_39, i32 %input_40, i32 %input_41, i32 %input_42, i32 %input_43, i32 %input_44, i32 %input_45, i32 %input_46, i32 %input_47, i32 %input_48, i32 %input_49, i32 %input_50, i32 %input_51, i32 %input_52, i32 %input_53, i32 %input_54, i32 %input_55, i32 %input_56, i32 %input_57, i32 %input_58, i32 %input_59, i32 %input_60, i32 %input_61, i32 %input_62, i32 %input_63, i32 %input_64, i32 %input_65, i32 %input_66, i32 %input_67, i32 %input_68, i32 %input_69, i32 %input_70, i32 %input_71, i32 %input_72, i32 %input_73, i32 %input_74, i32 %input_75, i32 %input_76, i32 %input_77, i32 %input_78, i32 %input_79, i32 %input_80, i32 %input_81, i32 %input_82, i32 %input_83, i32 %input_84, i32 %input_85, i32 %input_86, i32 %input_87, i32 %input_88, i32 %input_89, i32 %input_90, i32 %input_91, i32 %input_92, i32 %input_93, i32 %input_94, i32 %input_95, i32 %output, i32 %output_1, i32 %output_2, i32 %output_3, i32 %output_4, i32 %output_5, i32 %output_6, i32 %output_7, i32 %output_8, i32 %output_9, i32 %output_10, i32 %output_11, i32 %output_12, i32 %output_13, i32 %output_14, i32 %output_15, i32 %output_16, i32 %output_17, i32 %output_18, i32 %output_19, i32 %output_20, i32 %output_21, i32 %output_22, i32 %output_23, i32 %output_24, i32 %output_25, i32 %output_26, i32 %output_27, i32 %output_28, i32 %output_29, i32 %output_30, i32 %output_31, i32 %weight, i32 %weight_1, i32 %weight_2, i32 %weight_3, i32 %weight_4, i32 %weight_5, i32 %weight_6, i32 %weight_7, i32 %weight_8, i32 %weight_9, i32 %weight_10, i32 %weight_11, i32 %weight_12, i32 %weight_13, i32 %weight_14, i32 %weight_15, i32 %weight_16, i32 %weight_17, i32 %weight_18, i32 %weight_19, i32 %weight_20, i32 %weight_21, i32 %weight_22, i32 %weight_23, i32 %weight_24, i128 %kernel_input, i64 %vinput_read, i32 %kernel_weight, i64 %vweight_read, i512 %kernel_output, i64 %voutput_read" [cnn.cpp:417]   --->   Operation 175 'call' 'call_ln417' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 176 [1/1] (0.00ns)   --->   "%ret_ln418 = ret" [cnn.cpp:418]   --->   Operation 176 'ret' 'ret_ln418' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4.000ns, clock uncertainty: 1.080ns.
+
+ <State 1>: 1.000ns
+The critical path consists of the following:
+	s_axi read operation ('voutput_read') on port 'voutput' [22]  (1.000 ns)
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

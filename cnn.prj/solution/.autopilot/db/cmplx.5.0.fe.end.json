@@ -1,0 +1,156 @@
+{
+    "0": {
+        "name": "kernel_cnn",
+        "file": "cnn.cpp",
+        "fileloc": "374",
+        "instructions": "173",
+        "total_instructions": "5003",
+        "calls": "6",
+        "basicblocks": "1"
+    },
+    "1": {
+        "name": "load_output_S0",
+        "file": "cnn.cpp",
+        "fileloc": "101",
+        "instructions": "14",
+        "total_instructions": "255",
+        "calls": "3",
+        "basicblocks": "1"
+    },
+    "2": {
+        "name": "load_input_S0",
+        "file": "cnn.cpp",
+        "fileloc": "43",
+        "instructions": "14",
+        "total_instructions": "664",
+        "calls": "7",
+        "basicblocks": "1"
+    },
+    "3": {
+        "name": "load_output_S0_Pipeline_VITIS_LOOP_112_1_VITIS_LOOP_113_2_VITIS_LOOP_114_3",
+        "file": "cnn.cpp",
+        "fileloc": "112",
+        "instructions": "241",
+        "total_instructions": "241",
+        "calls": "",
+        "basicblocks": "9",
+        "loads": {
+            "L": "6"
+        },
+        "stores": {
+            "L": "76"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "store_output_S0_Pipeline_VITIS_LOOP_235_1_VITIS_LOOP_236_2_VITIS_LOOP_237_3",
+        "file": "cnn.cpp",
+        "fileloc": "235",
+        "instructions": "237",
+        "total_instructions": "237",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "70"
+        },
+        "stores": {
+            "L": "12"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "load_weight_S0",
+        "file": "cnn.cpp",
+        "fileloc": "168",
+        "instructions": "14",
+        "total_instructions": "174",
+        "calls": "10",
+        "basicblocks": "1"
+    },
+    "6": {
+        "name": "cnn",
+        "file": "cnn.cpp",
+        "fileloc": "289",
+        "instructions": "33",
+        "total_instructions": "4830",
+        "calls": "5 1 2 9 8",
+        "basicblocks": "7",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "7": {
+        "name": "load_input_S0_Pipeline_VITIS_LOOP_58_2_VITIS_LOOP_59_3",
+        "file": "cnn.cpp",
+        "fileloc": "58",
+        "instructions": "650",
+        "total_instructions": "650",
+        "calls": "",
+        "basicblocks": "117",
+        "loads": {
+            "L": "4"
+        },
+        "stores": {
+            "L": "392"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "8": {
+        "name": "store_output_S0",
+        "file": "cnn.cpp",
+        "fileloc": "224",
+        "instructions": "15",
+        "total_instructions": "252",
+        "calls": "4",
+        "basicblocks": "1"
+    },
+    "9": {
+        "name": "cnn_Pipeline_VITIS_LOOP_317_3_VITIS_LOOP_319_4_VITIS_LOOP_320_5",
+        "file": "cnn.cpp",
+        "fileloc": "317",
+        "instructions": "3452",
+        "total_instructions": "3452",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "638"
+        },
+        "stores": {
+            "L": "42"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "10": {
+        "name": "load_weight_S0_Pipeline_VITIS_LOOP_181_1_VITIS_LOOP_182_2_VITIS_LOOP_183_3_VITIS",
+        "file": "cnn.cpp",
+        "fileloc": "181",
+        "instructions": "160",
+        "total_instructions": "160",
+        "calls": "",
+        "basicblocks": "40",
+        "loads": {
+            "L": "7"
+        },
+        "stores": {
+            "L": "39"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

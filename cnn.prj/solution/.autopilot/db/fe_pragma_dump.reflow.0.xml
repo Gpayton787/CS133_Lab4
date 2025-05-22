@@ -1,0 +1,40 @@
+<pragmas>
+<pragma file="cnn.cpp" line="227" pragmaType="inline" parentfunction="store_output_S0" off="1" region="0" recursive="0"/>
+<pragma file="cnn.cpp" line="243" pragmaType="pipeline" parentfunction="store_output_S0" off="0" ii="1" rewind="0" style=""/>
+<pragma file="cnn.cpp" line="321" pragmaType="pipeline" parentfunction="cnn" off="0" ii="-1" rewind="0" style=""/>
+<pragma file="cnn.cpp" line="323" pragmaType="unroll" parentfunction="cnn" factor="-1" skip_exit_check="0"/>
+<pragma file="cnn.cpp" line="325" pragmaType="unroll" parentfunction="cnn" factor="-1" skip_exit_check="0"/>
+<pragma file="cnn.cpp" line="327" pragmaType="unroll" parentfunction="cnn" factor="-1" skip_exit_check="0"/>
+<pragma file="cnn.cpp" line="329" pragmaType="unroll" parentfunction="cnn" factor="-1" skip_exit_check="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="pragma" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="aggregate" parentfunction="pragma" compact="3" variable="this"/>
+<pragma file="cnn.cpp" line="376" pragmaType="aggregate" parentfunction="kernel_cnn" compact="3" variable="vinput"/>
+<pragma file="cnn.cpp" line="378" pragmaType="aggregate" parentfunction="kernel_cnn" compact="3" variable="vweight"/>
+<pragma file="cnn.cpp" line="380" pragmaType="aggregate" parentfunction="kernel_cnn" compact="3" variable="voutput"/>
+<pragma file="cnn.cpp" line="381" pragmaType="interface" parentfunction="kernel_cnn" mode="m_axi" port="vinput" bundle="kernel_input" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="cnn.cpp" line="382" pragmaType="interface" parentfunction="kernel_cnn" mode="m_axi" port="voutput" bundle="kernel_output" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="cnn.cpp" line="383" pragmaType="interface" parentfunction="kernel_cnn" mode="m_axi" port="vweight" bundle="kernel_weight" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="cnn.cpp" line="399" pragmaType="array_partition" parentfunction="kernel_cnn" dim="1" factor="1" mode="cyclic" dynamic="0" variable="input"/>
+<pragma file="cnn.cpp" line="400" pragmaType="array_partition" parentfunction="kernel_cnn" dim="2" factor="8" mode="cyclic" dynamic="0" variable="input"/>
+<pragma file="cnn.cpp" line="401" pragmaType="array_partition" parentfunction="kernel_cnn" dim="3" factor="12" mode="cyclic" dynamic="0" variable="input"/>
+<pragma file="cnn.cpp" line="403" pragmaType="array_partition" parentfunction="kernel_cnn" dim="1" factor="1" mode="cyclic" dynamic="0" variable="output"/>
+<pragma file="cnn.cpp" line="404" pragmaType="array_partition" parentfunction="kernel_cnn" dim="2" factor="4" mode="cyclic" dynamic="0" variable="output"/>
+<pragma file="cnn.cpp" line="405" pragmaType="array_partition" parentfunction="kernel_cnn" dim="3" factor="8" mode="cyclic" dynamic="0" variable="output"/>
+<pragma file="cnn.cpp" line="407" pragmaType="array_partition" parentfunction="kernel_cnn" dim="1" factor="1" mode="cyclic" dynamic="0" variable="weight"/>
+<pragma file="cnn.cpp" line="408" pragmaType="array_partition" parentfunction="kernel_cnn" dim="2" factor="1" mode="cyclic" dynamic="0" variable="weight"/>
+<pragma file="cnn.cpp" line="409" pragmaType="array_partition" parentfunction="kernel_cnn" dim="3" factor="5" mode="cyclic" dynamic="0" variable="weight"/>
+<pragma file="cnn.cpp" line="410" pragmaType="array_partition" parentfunction="kernel_cnn" dim="4" factor="5" mode="cyclic" dynamic="0" variable="weight"/>
+<pragma file="cnn.cpp" line="171" pragmaType="inline" parentfunction="load_weight_S0" off="1" region="0" recursive="0"/>
+<pragma file="cnn.cpp" line="190" pragmaType="pipeline" parentfunction="load_weight_S0" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::vector<float, 1ul>::operator[](unsigned long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::vector<float, 16ul>::operator[](unsigned long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="pragma" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="aggregate" parentfunction="pragma" compact="3" variable="this"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="pragma" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="aggregate" parentfunction="pragma" compact="3" variable="this"/>
+<pragma file="cnn.cpp" line="104" pragmaType="inline" parentfunction="load_output_S0" off="1" region="0" recursive="0"/>
+<pragma file="cnn.cpp" line="120" pragmaType="pipeline" parentfunction="load_output_S0" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::vector<float, 4ul>::operator[](unsigned long)" off="0" region="0" recursive="0"/>
+<pragma file="cnn.cpp" line="49" pragmaType="inline" parentfunction="load_input_S0" off="1" region="0" recursive="0"/>
+<pragma file="cnn.cpp" line="65" pragmaType="pipeline" parentfunction="load_input_S0" off="0" ii="1" rewind="0" style=""/>
+</pragmas>

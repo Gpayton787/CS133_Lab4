@@ -1,0 +1,140 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "6",
+    "file": "cnn.cpp",
+    "fileloc": 374,
+    "instructions": 36,
+    "name": "kernel_cnn",
+    "total_instructions": 1119
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array",
+    "fileloc": 55,
+    "instructions": 2,
+    "name": "_S_ref",
+    "total_instructions": 2
+  },
+  "10": {
+    "basicblocks": 19,
+    "calls": "",
+    "file": "cnn.cpp",
+    "fileloc": 43,
+    "instructions": 84,
+    "loads": {
+      "L": 5
+    },
+    "name": "load_input_S0",
+    "stores": {
+      "L": 5
+    },
+    "total_instructions": 128
+  },
+  "11": {
+    "basicblocks": 19,
+    "calls": "",
+    "file": "cnn.cpp",
+    "fileloc": 101,
+    "instructions": 204,
+    "loads": {
+      "L": 17
+    },
+    "name": "load_output_S0",
+    "stores": {
+      "L": 17
+    },
+    "total_instructions": 380
+  },
+  "2": {
+    "basicblocks": 19,
+    "calls": "",
+    "file": "cnn.cpp",
+    "fileloc": 224,
+    "instructions": 204,
+    "loads": {
+      "L": 17
+    },
+    "name": "store_output_S0",
+    "stores": {
+      "L": 17
+    },
+    "total_instructions": 380
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "4",
+    "file": "array",
+    "fileloc": 185,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array",
+    "fileloc": 55,
+    "instructions": 2,
+    "name": "_S_ref",
+    "total_instructions": 2
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "1",
+    "file": "array",
+    "fileloc": 185,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  },
+  "6": {
+    "basicblocks": 55,
+    "calls": "8 11 10 2",
+    "file": "cnn.cpp",
+    "fileloc": 289,
+    "instructions": 119,
+    "loads": {
+      "L": 3
+    },
+    "name": "cnn",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 1083
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array",
+    "fileloc": 55,
+    "instructions": 2,
+    "name": "_S_ref",
+    "total_instructions": 2
+  },
+  "8": {
+    "basicblocks": 25,
+    "calls": "",
+    "file": "cnn.cpp",
+    "fileloc": 168,
+    "instructions": 65,
+    "loads": {
+      "L": 2
+    },
+    "name": "load_weight_S0",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 76
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "7",
+    "file": "array",
+    "fileloc": 185,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  }
+}

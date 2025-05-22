@@ -1,0 +1,86 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1",
+    "file": "cnn.cpp",
+    "fileloc": 374,
+    "instructions": 657,
+    "name": "kernel_cnn",
+    "total_instructions": 6078
+  },
+  "1": {
+    "basicblocks": 11,
+    "calls": "3 4 5 2",
+    "file": "cnn.cpp",
+    "fileloc": 289,
+    "instructions": 3369,
+    "loads": {
+      "L": 633
+    },
+    "name": "cnn",
+    "stores": {
+      "L": 32
+    },
+    "total_instructions": 5421
+  },
+  "2": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "cnn.cpp",
+    "fileloc": 224,
+    "instructions": 220,
+    "loads": {
+      "L": 64
+    },
+    "name": "store_output_S0",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 301
+  },
+  "3": {
+    "basicblocks": 45,
+    "calls": "",
+    "file": "cnn.cpp",
+    "fileloc": 168,
+    "instructions": 233,
+    "loads": {
+      "L": 1
+    },
+    "name": "load_weight_S0",
+    "stores": {
+      "L": 25
+    },
+    "total_instructions": 235
+  },
+  "4": {
+    "basicblocks": 12,
+    "calls": "",
+    "file": "cnn.cpp",
+    "fileloc": 101,
+    "instructions": 307,
+    "loads": {
+      "L": 1
+    },
+    "name": "load_output_S0",
+    "stores": {
+      "L": 64
+    },
+    "total_instructions": 373
+  },
+  "5": {
+    "basicblocks": 118,
+    "calls": "",
+    "file": "cnn.cpp",
+    "fileloc": 43,
+    "instructions": 1125,
+    "loads": {
+      "L": 1
+    },
+    "name": "load_input_S0",
+    "stores": {
+      "L": 384
+    },
+    "total_instructions": 1143
+  }
+}
